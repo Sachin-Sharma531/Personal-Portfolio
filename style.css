@@ -109,11 +109,6 @@ section {
   gap: 24px;
   align-items: start;
 }
-@media (max-width: 880px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .intro-card {
   background: rgba(255, 255, 255, 0.02);
@@ -208,16 +203,7 @@ cite {
   margin-top: 18px;
   align-items: stretch;
 }
-@media (max-width: 980px) {
-  .services {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .services {
-    grid-template-columns: 1fr;
-  }
-}
+
 .service-card {
   background: rgba(255, 255, 255, 0.02);
   padding: 18px;
@@ -401,34 +387,46 @@ cite {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-.projects-option {
-  background-color: transparent;
-  margin: 5px 24px;
-  display: flexbox;
+/* actions wrapper — places both buttons side-by-side and centers them */
+.projects-actions {
+  display: flex;
+  gap: 12px;
   justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap; /* allows stacking on very small screens */
 }
 
+/* anchor as simple inline container (no extra layout responsibility) */
+.projects-option {
+  background: transparent;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+/* button styling */
 .projects-btn {
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.14s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
 }
+
 .pview {
   background: transparent;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
-
 .ppreview {
   background: linear-gradient(90deg, #60a5fa, #3b82f6);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
 }
-
 .pview:hover {
   background-color: #3b82f6;
   transform: translateY(-4px);
@@ -554,7 +552,17 @@ footer {
   color: #9aa4b2;
   text-align: center;
 }
+
+@media (max-width: 980px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 880px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
   .header-inner {
     padding: 8px 12px;
     flex-direction: column;
@@ -563,11 +571,24 @@ footer {
   .intro-card {
     padding: 18px;
   }
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
   .header-inner,
   .footer-inner {
     padding: 8px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .projects-actions {
+    gap: 8px;
+  }
+  .projects-btn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
   }
 }
