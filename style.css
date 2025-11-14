@@ -38,6 +38,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  min-width: 0;
 }
 
 .brand {
@@ -64,6 +65,8 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   align-items: center;
   white-space: nowrap;
@@ -71,7 +74,8 @@ header {
 .main-nav a {
   color: #9aa4b2;
   text-decoration: none;
-  padding: 6px 10px;
+  white-space: nowrap;
+  padding: 6px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
@@ -116,7 +120,8 @@ section {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
   text-align: center;
-  height: 240px;
+  height: auto;
+  min-height: 220px;
 }
 .intro-card h2 {
   margin: 0 0 6px 0;
@@ -138,15 +143,21 @@ section {
   gap: 12px;
   justify-content: center;
   margin-top: 12px;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 6px 0;
 }
 .btn {
-  display: inline-block;
-  margin: 30px;
-  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 22px;
   border-radius: 10px;
   font-weight: 700;
   text-decoration: none;
+  min-width: 140px;
+  white-space: nowrap;
   cursor: pointer;
   border: none;
   transition: transform 0.12s ease, box-shadow 0.14s ease;
@@ -387,24 +398,22 @@ cite {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-/* actions wrapper — places both buttons side-by-side and centers them */
+
 .projects-actions {
   display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
   margin-top: 12px;
-  flex-wrap: wrap; /* allows stacking on very small screens */
+  flex-wrap: wrap;
 }
 
-/* anchor as simple inline container (no extra layout responsibility) */
 .projects-option {
   background: transparent;
   text-decoration: none;
   display: inline-flex;
 }
 
-/* button styling */
 .projects-btn {
   padding: 10px 14px;
   border-radius: 10px;
@@ -584,11 +593,34 @@ footer {
 }
 
 @media (max-width: 420px) {
+  .cta-group {
+    gap: 10px;
+  }
+  .btn {
+    padding: 8px 12px;
+    min-width: 95px;
+    font-size: 0.9rem;
+  }
   .projects-actions {
     gap: 8px;
   }
   .projects-btn {
     padding: 8px 12px;
     font-size: 0.95rem;
+  }
+
+  .main-nav ul {
+    gap: 6px;
+  }
+  header {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .main-nav ul::-webkit-scrollbar {
+    height: 6px;
+  }
+  .main-nav ul {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.06) transparent;
   }
 }
