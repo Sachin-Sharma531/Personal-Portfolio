@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Sharma Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="topic">Contact Me</h1>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Sachin Sharma</h1>
+        <p>Web Developer • Programmer</p>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="project.html">My Projects</a></li>
+          <li><a href="qualification.html">Education Qualification and Skills</a></li>
+          <li><a href="contact.html" aria-current="page">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-page">
+      <div class="contact-quick">
+        <h2 class="section-title center">Get in Touch with me</h2>
+        <div class="contact-box"><a href="https://github.com/Sachin-Sharma531" target="_blank" rel="noopener noreferrer"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Sachin github account" class="link-img"></p>GitHub</a></div>
+        <div class="contact-box"><a href="mailto:example@gmail.com"  target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Sachin Gmail" class="link-img"></p>Email</a></div>
+        <div class="contact-box"><a href="https://www.linkedin.com/in/sachin-sharma-1523b4382" target="_blank" rel="noopener noreferrer"><img src="https://i.logos-download.com/1823/425-s1280-a32ecda22ed1d48491f674d4b3f2663f.avif/LinkedIn_Logo_2021-s1280.avif" alt="Sachin linkedin account" class="link-img"></p>LinkedIn</a></div>
+      </div>
+
+      <div class="contact-info">
+        <h2 class="section-title center">Contact Info</h2>
+        <p class="muted">Email: example@gmail.com</p>
+        <p class="muted">Github: Sachin-Sharma531</p>
+        <p class="muted lkdin-link">LinkedIn: <a href="https://www.linkedin.com/in/linkedin" target="_blank" rel="noopener noreferrer">Sachin Sharma</a></p>
+      </div>
+
+      <div class="form-send">
+        <h2 class="section-title center">Send me your Ideas and Feedback</h2>
+        <form method="post" action="mailto:example@gmail.com" class="form-send-inner">
+          <div class="form-row">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
+        </form>
+        <button class="send-small" type="submit" form="contactForm" onclick="document.querySelector('.form-send-inner').submit()">Send Email</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; Sachin Sharma. All rights reserved</p>
+      <p>
+        <a href="https://www.linkedin.com/in/sachin-sharma-1523b4382" target="_blank" rel="noopener noreferrer"><img src="https://i.logos-download.com/1823/425-s1280-a32ecda22ed1d48491f674d4b3f2663f.avif/LinkedIn_Logo_2021-s1280.avif" alt="Sachin linkedin account" width="60px"></a> |
+        <a href="https://github.com/Sachin-Sharma531" target="_blank" rel="noopener noreferrer"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Sachin github account" width="25px"></a> |
+        <a href="mailto:exapmle@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Sachin Gmail" width="30px"></a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
